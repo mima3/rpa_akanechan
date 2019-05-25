@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{06EE8506-99BB-490E-A8A9-A2D977079886}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AkanechanKawaii</RootNamespace>
+    <AssemblyName>FriendlySample</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Codeer.Friendly, Version=2.5.2.0, Culture=neutral, PublicKeyToken=6c44da6fca38aa86, processorArchitecture=MSIL">
+      <HintPath>..\packages\Codeer.Friendly.2.5.2\lib\net40\Codeer.Friendly.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Codeer.Friendly.Dynamic, Version=2.5.2.0, Culture=neutral, PublicKeyToken=376bc779077733e8, processorArchitecture=MSIL">
+      <HintPath>..\packages\Codeer.Friendly.2.5.2\lib\net40\Codeer.Friendly.Dynamic.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Codeer.Friendly.Windows, Version=2.12.0.0, Culture=neutral, PublicKeyToken=532f270f1da385b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Codeer.Friendly.Windows.2.12.0\lib\net20\Codeer.Friendly.Windows.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Codeer.Friendly.Windows.Grasp.2.0, Version=2.10.0.0, Culture=neutral, PublicKeyToken=92809a28945fb91d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Codeer.Friendly.Windows.Grasp.2.10.0\lib\net35\Codeer.Friendly.Windows.Grasp.2.0.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Codeer.Friendly.Windows.Grasp.3.5, Version=2.10.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Codeer.Friendly.Windows.Grasp.2.10.0\lib\net35\Codeer.Friendly.Windows.Grasp.3.5.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Codeer.Friendly.Windows.NativeStandardControls, Version=2.11.8.0, Culture=neutral, PublicKeyToken=90759bf0c8b8639e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Codeer.Friendly.Windows.NativeStandardControls.2.11.8\lib\net20\Codeer.Friendly.Windows.NativeStandardControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Codeer.Friendly.Windows.NativeStandardControls.Generator, Version=2.11.8.0, Culture=neutral, PublicKeyToken=eea982eb65b72dea, processorArchitecture=MSIL">
+      <HintPath>..\packages\Codeer.Friendly.Windows.NativeStandardControls.2.11.8\lib\net20\Codeer.Friendly.Windows.NativeStandardControls.Generator.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Codeer.TestAssistant.GeneratorToolKit, Version=3.3.2.0, Culture=neutral, PublicKeyToken=f7af39ab9bcf13fe, processorArchitecture=MSIL">
+      <HintPath>..\packages\Codeer.TestAssistant.GeneratorToolKit.3.3.2\lib\net20\Codeer.TestAssistant.GeneratorToolKit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="RM.Friendly.WPFStandardControls.3.0, Version=1.31.1.0, Culture=neutral, PublicKeyToken=1b8f25b96765ebb0, processorArchitecture=MSIL">
+      <HintPath>..\packages\RM.Friendly.WPFStandardControls.1.31.1\lib\net40\RM.Friendly.WPFStandardControls.3.0.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RM.Friendly.WPFStandardControls.3.0.Generator, Version=1.31.1.0, Culture=neutral, PublicKeyToken=41822cddf2e8cce7, processorArchitecture=MSIL">
+      <HintPath>..\packages\RM.Friendly.WPFStandardControls.1.31.1\lib\net40\RM.Friendly.WPFStandardControls.3.0.Generator.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RM.Friendly.WPFStandardControls.3.5, Version=1.31.1.0, Culture=neutral, PublicKeyToken=133fc95b5bce0b86, processorArchitecture=MSIL">
+      <HintPath>..\packages\RM.Friendly.WPFStandardControls.1.31.1\lib\net40\RM.Friendly.WPFStandardControls.3.5.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RM.Friendly.WPFStandardControls.4.0, Version=1.31.1.0, Culture=neutral, PublicKeyToken=804da7e4293a9f15, processorArchitecture=MSIL">
+      <HintPath>..\packages\RM.Friendly.WPFStandardControls.1.31.1\lib\net40\RM.Friendly.WPFStandardControls.4.0.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RM.Friendly.WPFStandardControls.4.0.Generator, Version=1.31.1.0, Culture=neutral, PublicKeyToken=12a0c2a29e956d84, processorArchitecture=MSIL">
+      <HintPath>..\packages\RM.Friendly.WPFStandardControls.1.31.1\lib\net40\RM.Friendly.WPFStandardControls.4.0.Generator.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

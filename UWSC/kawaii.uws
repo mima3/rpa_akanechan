@@ -1,0 +1,47 @@
+id = GETID("VOICEROID2", "HwndWrapper[VoiceroidEdito", -1)
+If id=NULL Then
+    id = GETID("VOICEROID2*", "HwndWrapper[VoiceroidEdito", -1)
+EndIf
+
+// 再生を行う
+SLEEP(1)
+SENDSTR(id, "ｱｶﾈﾁｬﾝｶﾜｲｲﾔｯﾀ", 1, True, True)
+
+CLKITEM(id, "", CLK_BTN , True, 0)
+
+// ステータスバーをみて再生完了を待つ
+sts = ""
+While sts <> "テキストの読み上げは完了しました。"
+    Sleep(0.1)
+    GETITEM(id, ITM_STATUSBAR)
+    sts = ALL_ITEM_LIST[6]
+Wend
+
+// 保存ボタン
+CLKITEM(id, "", CLK_BTN , True, 5)
+
+// 音声保存画面
+idSaveWv = GETID("音声保存", "HwndWrapper[VoiceroidEdito", -1)
+CLKITEM(idSaveWv, "OK", CLK_BTN , True, 0)
+
+// 名前を付けて保存画面
+idFileSave = GETID("名前を付けて保存", "#32770", -1)
+SENDSTR(idFileSave, PARAM_STR[0], 0, True, True)
+KBD(VK_ENTER)
+//CLKITEM(idFileSave, "保存", CLK_ACC)
+
+// OK押下
+idInfo = GETID("情報", "#32770", -1)
+CLKITEM(idInfo, "OK", CLK_BTN)
+
+// 葵ちゃんに切り替え
+SLEEP(1)
+ret = CHKIMG("aoi.bmp")
+BTN(LEFT, CLICK, G_IMG_X, G_IMG_Y)
+SLEEP(0.5)
+SENDSTR(id, "ｵﾈｴﾁｬﾝｶﾜｲｲﾔｯﾀ", 1, True, True)
+CLKITEM(id, "", CLK_BTN , True, 0)
+
+SLEEP(0.5)
+CHKIMG("akane.bmp")
+BTN(LEFT, CLICK, G_IMG_X, G_IMG_Y)
