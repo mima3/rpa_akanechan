@@ -4,6 +4,11 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 #マルチディスプレイの場合は、１のディスプレイじゃないと動かない模様
 
+# Trueに設定した場合、スクリプトが実行されると、Sikuliはアクションが実行される前にそ
+# のアクションが発生する場所に視覚効果（点滅する二重線の赤い丸）を表示します。
+# 標準で2秒
+setShowActions(False)
+
 # 茜ちゃんしゃべる
 click(Pattern("1558790034069.png").targetOffset(-174,-16))
 type('a', Key.CTRL)
